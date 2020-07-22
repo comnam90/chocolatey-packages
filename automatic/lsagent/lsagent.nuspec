@@ -3,18 +3,12 @@
   <metadata>
     <id>lsagent</id>
     <version>7.2.110.16</version>
-    <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl is highly recommended for the community feed</packageSourceUrl>-->
-    <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
-    <!--<owners>__REPLACE_YOUR_NAME__</owners>-->
-    <!-- ============================== -->
-
-    <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <!-- This section is about the software itself -->
+    <packageSourceUrl>https://github.com/comnam90/chocolatey-packages/tree/master/automatic/lsagent</packageSourceUrl>
+    <owners>comnam90</owners>
     <title>lsagent</title>
     <authors>Lansweeper</authors>
     <projectUrl>https://www.lansweeper.com/download/lsagent/</projectUrl>
-    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/lsagent.png</iconUrl>-->
-    <iconUrl>https://27jts3o00yy49vo2y30wem91-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/LsAgent-Scanning-Agent.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/comnam90/chocolatey-packages@6c54409dc9a3563fb0655a7838f442cca7357275/icons/LsAgent.png</iconUrl>
     <copyright>2020 LsAgent Lansweeper</copyright>
     <licenseUrl>https://www.lansweeper.com/terms-of-use/</licenseUrl>
     <docsUrl>https://www.lansweeper.com/kb/</docsUrl>
