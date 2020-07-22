@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>lsagent</id>
-    <version>7.2.110.16</version>
+    <version>7.2.110.12</version>
     <packageSourceUrl>https://github.com/comnam90/chocolatey-packages/tree/master/automatic/lsagent</packageSourceUrl>
     <owners>comnam90</owners>
     <title>lsagent</title>
