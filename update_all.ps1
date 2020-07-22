@@ -8,7 +8,7 @@ $Options = [ordered]@{
     Timeout       = 100                                     #Connection timeout in seconds
     UpdateTimeout = 1200                                    #Update timeout in seconds
     Threads       = 10                                      #Number of background jobs to use
-    Push          = $Env:au_Push -eq 'true'                 #Push to chocolatey
+    Push          = $Env:au_Push -eq 'false'                 #Push to chocolatey
     PluginPath    = ''                                      #Path to user plugins
 
     Report = @{

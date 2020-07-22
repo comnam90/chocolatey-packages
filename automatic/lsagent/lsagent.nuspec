@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>lsagent</id>
+    <version>7.2.110.16</version>
+    <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl is highly recommended for the community feed</packageSourceUrl>-->
+    <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
+    <!--<owners>__REPLACE_YOUR_NAME__</owners>-->
+    <!-- ============================== -->
+
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <!-- This section is about the software itself -->
+    <title>lsagent</title>
+    <authors>Lansweeper</authors>
+    <projectUrl>https://www.lansweeper.com/download/lsagent/</projectUrl>
+    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/lsagent.png</iconUrl>-->
+    <iconUrl>https://27jts3o00yy49vo2y30wem91-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/LsAgent-Scanning-Agent.png</iconUrl>
+    <copyright>2020 LsAgent Lansweeper</copyright>
+    <licenseUrl>https://www.lansweeper.com/terms-of-use/</licenseUrl>
+    <docsUrl>https://www.lansweeper.com/kb/</docsUrl>
+    <tags>lsagent lansweeper</tags>
+    <summary>Lansweeper Agent</summary>
+    <description><![CDATA[LsAgent is a small, lightweight application that you can install on your Windows, Mac and Linux devices. It gathers the asset data locally and then sends it back to your Lansweeper installation, either by using a direct push or through Lansweeper's cloud-hosted relay service.
+
+## Features
+
+* Automatically collect an inventory from a computer and sends the data back to a Lansweeper installation, either directly or through the lansweeper relay server in the cloud.
+* Does not require scanning credentials in Lansweeper.
+* Does not require administrative privileges to be able to scan.
+* Does not require configuration of your computers' firewalls for scanning. It does require an outbound connection to your Lansweeper installation or cloud relay server.
+
+## Package parameters
+
+- `/Prefix=<string>` - Installation Directory (Optional). Default: `C:\Program Files (x86)/LansweeperAgent`
+- `/Server=<string>` - FQDN, NetBios or IP of the Lansweeper Scanning Server.
+- `/Port=<int32>` - Listening Port on the Scanning Server (Optional). Default: `9524`.
+- `/AgentKey=<string>` - Cloud Relay Authentication Key (Optional).
+
+Example: `choco install lsagent --params "/Server=lansweepersvr"`
+
+## Notes
+
+None
+]]></description>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.5.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
