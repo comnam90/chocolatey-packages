@@ -1,19 +1,19 @@
-﻿# <img src="https://27jts3o00yy49vo2y30wem91-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/LsAgent-Scanning-Agent.png" width="48" height="48"/> [lsagent](https://chocolatey.org/packages/lansweeper)
+﻿# <img src="https://cdn.jsdelivr.net/gh/comnam90/chocolatey-packages@2da327a6f4e84fbaaa6cd428ed889022a3e9d05b/icons/lansweeper.jpg" width="48" height="48"/> [Lansweeper](https://chocolatey.org/packages/lansweeper)
 
-LsAgent is a small, lightweight application that you can install on your Windows, Mac and Linux devices. It gathers the asset data locally and then sends it back to your Lansweeper installation, either by using a direct push or through Lansweeper's cloud-hosted relay service.
+IT Asset Management Software That Finds & Manages All Assets Across Your Enterprise. Track Hardware, Software, and Users. Agentless Network Discovery.
+
+Lansweeper allows you to scan networks ranging from just a few to hundreds of thousands of assets.
 
 ## Features
 
-* Automatically collect an inventory from a computer and sends the data back to a Lansweeper installation, either directly or through the lansweeper relay server in the cloud.
-* Does not require scanning credentials in Lansweeper.
-* Does not require administrative privileges to be able to scan.
-* Does not require configuration of your computers' firewalls for scanning. It does require an outbound connection to your Lansweeper installation or cloud relay server.
+* Get a complete and detailed inventory of your IT assets wherever they are located: on premises, cloud instances or mobile endpoints.​
+* Go beyond the massive amount of asset information Lansweeper retrieves by default and get a complete and up-to-date asset inventory.
+* Choose from over 400 ready-made, out-of-the-box reports or build custom reports within minutes. Set up dashboards for a birds-eye view on your IT.
 
 ## Package parameters
 
 The following parameters can be used:
 
-* `/upgrade`: to update a Lansweeper installation.
 * `/parts`: to specify which components to install (e.g. /parts ="SCAN,DB,WEB").
 * `/dbserver`: SQLLocalDB or SQLServer (e.g. /dbserver="SQLServer").
 * `/dbinstance`: to choose the SQL Server instance to connect to (e.g. /dbinstance="localhost\sqlexpress").
@@ -38,4 +38,4 @@ The final installation log file can be also found in Program Files (x86)\Lanswee
 
 ## Notes
 
-* `upgrade` parameter must be specified when upgrading an existing installation, otherwise it will overwrite the existing installation.
+* If the installer detects an existing installation of Lansweeper, it will attempt to upgrade it.

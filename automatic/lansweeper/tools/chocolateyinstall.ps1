@@ -7,8 +7,6 @@ $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 function Test-InstallerParameters {
   [cmdletbinding(DefaultParameterSetName="Default")]
   param(
-    [parameter(ParameterSetName = "Upgrade", Mandatory)]
-    [switch]$Upgrade,
     [parameter(ParameterSetName = "Default")]
     [ValidateNotNullOrEmpty()]
     [ValidateScript(
@@ -133,27 +131,7 @@ function Test-InstallerParameters {
 $PP = Get-PackageParameters
 $InstallParams = " "
 $InstallParams += Test-InstallerParameters @PP -Verbose
-Write-Host "Installer Parameters = $InstallParams"
-<#
-if($PP['parts']){$InstallParams += "/parts=""$($PP['parts'])"" "}
-if($PP['dbserver']){$InstallParams += "/dbserver=""$($PP['dbserver'])"" "}
-if($PP['dbinstance']){$InstallParams += "/dbinstance=""$($PP['dbinstance'])"" "}
-if($PP['dbuser']){$InstallParams += "/dbuser=""$($PP['dbuser'])"" "}
-if($PP['dbpassword']){$InstallParams += "/dbpassword=""$($PP['dbpassword'])"" "}
-if($PP['dbuserconfig']){$InstallParams += "/dbuserconfig=""$($PP['dbuserconfig'])"" "}
-if($PP['allowdboverwrite']){$InstallParams += "/allowdboverwrite=""$($PP['allowdboverwrite'])"" "}
-if($PP['webserver']){$InstallParams += "/webserver=""$($PP['webserver'])"" "}
-if($PP['httpport']){$InstallParams += "/httpport=$($PP['httpport']) "}
-if($PP['httpsport']){$InstallParams += "/httpsport=$($PP['httpsport']) "}
-if($PP['folder']){$InstallParams += "/folder=""$($PP['folder'])"" "}
-if($PP['credkeyfile']){$InstallParams += "/credkeyfile=""$($PP['credkeyfile'])"" "}
-if($PP['noDCOMReset']){$InstallParams += "/noDCOMReset=""$($PP['noDCOMReset'])"" "}
-if($PP['ConfigurationFile']){$InstallParams += "/ConfigurationFile=""$($PP['ConfigurationFile'])"" "}
-
-if( ($PP['httpport'] -or $PP['httpsport']) -and ! $PP['webserver'] ){
-  Write-Error -Message "/httpport or /httpsport cannot be specified without also providing /webserver"
-}
-#>
+Write-Verbose "Installer Parameters = $InstallParams"
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
@@ -172,6 +150,11 @@ $packageArgs = @{
 
 if($PP['Upgrade']){
   $packageArgs.silentArgs = $packageArgs.silentArgs.Replace("/install","/upgrade")
+}
+
+if(Get-AppInstallLocation -AppNamePattern $packageArgs.packageName){
+  Write-Host "Detected Lansweeper installation - Upgrading"
+  $packageArgs.silentArgs = '/verysilent /accepteula /upgrade'
 }
 
 Install-ChocolateyPackage @packageArgs 
