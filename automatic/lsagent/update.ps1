@@ -16,7 +16,9 @@ function global:au_SearchReplace {
  function global:au_GetLatest {
      $re = 'LsAgent (?<Version>[\d\.]+),'
  
+     $global:ProgressPreference = 'SilentlyContinue'
      $release_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+     $Global:ProgressPreference = 'Continue'
      $download_page_template = "https://cdn.lansweeper.com/download/{0}.{1}.{2}/{3}/LsAgent-windows.exe"
      $version = $release_page.links | ? outerhtml -match $re | select -First 1 -Expand outerhtml | %{
          if($_ -imatch $re){[version]$Matches['Version']}
@@ -25,7 +27,9 @@ function global:au_SearchReplace {
  
      $current_checksum = (gi $PSScriptRoot\tools\chocolateyInstall.ps1 | sls '\bchecksum\b') -split "=|'" | Select -Last 1 -Skip 1
      if ($current_checksum.Length -ne 64) { throw "Can't find current checksum" }
+     $global:ProgressPreference = 'SilentlyContinue'
      $remote_checksum  = Get-RemoteChecksum $url
+     $Global:ProgressPreference = 'Continue'
      if ($current_checksum -ne $remote_checksum) {
          Write-Host 'Remote checksum is different then the current one, forcing update'
          $global:au_old_force = $global:au_force
