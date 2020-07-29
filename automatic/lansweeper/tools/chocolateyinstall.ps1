@@ -2,7 +2,6 @@
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-# Helper Function
 
 function Test-InstallerParameters {
   [cmdletbinding(DefaultParameterSetName="Default")]
