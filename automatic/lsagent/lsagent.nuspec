@@ -5,7 +5,7 @@
     <version>7.2.110.16</version>
     <packageSourceUrl>https://github.com/comnam90/chocolatey-packages/tree/master/automatic/lsagent</packageSourceUrl>
     <owners>comnam90</owners>
-    <title>lsagent</title>
+    <title>LsAgent</title>
     <authors>Lansweeper</authors>
     <projectUrl>https://www.lansweeper.com/download/lsagent/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/comnam90/chocolatey-packages@6c54409dc9a3563fb0655a7838f442cca7357275/icons/LsAgent.png</iconUrl>
@@ -13,6 +13,7 @@
     <licenseUrl>https://www.lansweeper.com/terms-of-use/</licenseUrl>
     <docsUrl>https://www.lansweeper.com/kb/</docsUrl>
     <tags>lsagent lansweeper</tags>
+    <releaseNotes>https://www.lansweeper.com/changelog/</releaseNotes>
     <summary>Lansweeper Agent</summary>
     <description><![CDATA[LsAgent is a small, lightweight application that you can install on your Windows, Mac and Linux devices. It gathers the asset data locally and then sends it back to your Lansweeper installation, either by using a direct push or through Lansweeper's cloud-hosted relay service.
 
@@ -25,10 +26,10 @@
 
 ## Package parameters
 
-- `/Prefix=<string>` - Installation Directory (Optional). Default: `C:\Program Files (x86)/LansweeperAgent`
-- `/Server=<string>` - FQDN, NetBios or IP of the Lansweeper Scanning Server.
-- `/Port=<int32>` - Listening Port on the Scanning Server (Optional). Default: `9524`.
-- `/AgentKey=<string>` - Cloud Relay Authentication Key (Optional).
+- `/Prefix` - Installation Directory (Optional). Default: `C:\Program Files (x86)/LansweeperAgent`
+- `/Server` - FQDN, NetBios or IP of the Lansweeper Scanning Server.
+- `/Port` - Listening Port on the Scanning Server (Optional). Default: `9524`.
+- `/AgentKey` - Cloud Relay Authentication Key (Optional).
 
 Example: `choco install lsagent --params "/Server=lansweepersvr"`
 

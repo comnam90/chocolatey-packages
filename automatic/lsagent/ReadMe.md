@@ -1,4 +1,4 @@
-﻿# <img src="https://27jts3o00yy49vo2y30wem91-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/LsAgent-Scanning-Agent.png" width="48" height="48"/> [lsagent](https://chocolatey.org/packages/lsagent)
+﻿# <img src="https://cdn.jsdelivr.net/gh/comnam90/chocolatey-packages@6c54409dc9a3563fb0655a7838f442cca7357275/icons/LsAgent.png" width="48" height="48"/> [lsagent](https://chocolatey.org/packages/lsagent)
 
 LsAgent is a small, lightweight application that you can install on your Windows, Mac and Linux devices. It gathers the asset data locally and then sends it back to your Lansweeper installation, either by using a direct push or through Lansweeper's cloud-hosted relay service.
 
@@ -11,10 +11,10 @@ LsAgent is a small, lightweight application that you can install on your Windows
 
 ## Package parameters
 
-- `/Prefix=<string>` - Installation Directory (Optional). Default: `C:\Program Files (x86)/LansweeperAgent`
-- `/Server=<string>` - FQDN, NetBios or IP of the Lansweeper Scanning Server.
-- `/Port=<int32>` - Listening Port on the Scanning Server (Optional). Default: `9524`.
-- `/AgentKey=<string>` - Cloud Relay Authentication Key (Optional).
+- `/Prefix` - Installation Directory (Optional). Default: `C:\Program Files (x86)/LansweeperAgent`
+- `/Server` - FQDN, NetBios or IP of the Lansweeper Scanning Server.
+- `/Port` - Listening Port on the Scanning Server (Optional). Default: `9524`.
+- `/AgentKey` - Cloud Relay Authentication Key (Optional).
 
 Example: `choco install lsagent --params "/Server=lansweepersvr"`
 
