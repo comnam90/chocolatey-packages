@@ -6,3 +6,4 @@
 ## Packages
 
 - [LsAgent](automatic/lsagent/)
+- [Lansweeper](automatic/lansweeper/
