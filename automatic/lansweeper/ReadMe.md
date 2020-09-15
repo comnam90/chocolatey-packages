@@ -1,4 +1,6 @@
 ﻿# <img src="https://cdn.jsdelivr.net/gh/comnam90/chocolatey-packages@2da327a6f4e84fbaaa6cd428ed889022a3e9d05b/icons/lansweeper.jpg" width="48" height="48"/> [Lansweeper](https://chocolatey.org/packages/lansweeper)
+ 
+![Chocolatey](https://img.shields.io/chocolatey/dt/lansweeper?logo=chocolatey)
 
 IT Asset Management Software That Finds & Manages All Assets Across Your Enterprise. Track Hardware, Software, and Users. Agentless Network Discovery.
 
