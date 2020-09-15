@@ -1,6 +1,6 @@
 ﻿# <img src="https://cdn.jsdelivr.net/gh/comnam90/chocolatey-packages@6c54409dc9a3563fb0655a7838f442cca7357275/icons/LsAgent.png" width="48" height="48"/> [lsagent](https://chocolatey.org/packages/lsagent)
 
-![Chocolatey](https://img.shields.io/chocolatey/dt/lsagent?logo=chocolatey)
+[![Chocolatey](https://img.shields.io/chocolatey/dt/lsagent?logo=chocolatey)](https://chocolatey.org/packages/lsagent)
 
 LsAgent is a small, lightweight application that you can install on your Windows, Mac and Linux devices. It gathers the asset data locally and then sends it back to your Lansweeper installation, either by using a direct push or through Lansweeper's cloud-hosted relay service.
 
