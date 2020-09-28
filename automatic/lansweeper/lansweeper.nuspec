@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>lansweeper</id>
-    <version>8.0.130.37</version>
+    <version>8.0.130.38</version>
     <packageSourceUrl>https://github.com/comnam90/chocolatey-packages/tree/master/automatic/lansweeper</packageSourceUrl>
     <owners>comnam90</owners>
     <title>Lansweeper Server</title>
@@ -15,7 +15,9 @@
     <tags>lansweeper</tags>
     <releaseNotes>https://www.lansweeper.com/changelog/</releaseNotes>
     <summary>Cross-Platform IT Asset Discovery and Inventory</summary>
-    <description><![CDATA[IT Asset Management Software That Finds & Manages All Assets Across Your Enterprise. Track Hardware, Software, and Users. Agentless Network Discovery.
+    <description><![CDATA[[![Chocolatey](https://img.shields.io/chocolatey/dt/lansweeper?logo=chocolatey)](https://chocolatey.org/packages/lansweeper)
+
+IT Asset Management Software That Finds & Manages All Assets Across Your Enterprise. Track Hardware, Software, and Users. Agentless Network Discovery.
 
 Lansweeper allows you to scan networks ranging from just a few to hundreds of thousands of assets.
 
